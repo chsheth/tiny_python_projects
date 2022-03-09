@@ -2,9 +2,9 @@
 
 
 '''
-Author  :
-Date    :
-Purpose :
+Author  : Anon
+Date    : 3/9/22
+Purpose : Howler program
 '''
 
 
