@@ -12,7 +12,7 @@ import os
 import argparse
 import sys
 
-from pytest import param
+#from pytest import param
 
 
 #-----
@@ -38,6 +38,7 @@ def get_args():
     
 
 #------
+"""
 def main():
     ''' Main function '''
     args = get_args()
@@ -51,8 +52,24 @@ def main():
         print(y.upper(), file=open(args.out, 'wt'))
     else:
         print(y.upper())
+"""
 
 
+
+def main():
+    ''' Main function '''
+    args = get_args()
+    
+    if os.path.isfile(args.text):
+        with open(args.text, 'rt') as f:
+            y= f.read().rstrip()
+    else:
+        y = args.text
+
+    if args.out:
+        print(y.upper(), file=open(args.out, 'wt'))
+    else:
+        print(y.upper())
 
 
 #------
