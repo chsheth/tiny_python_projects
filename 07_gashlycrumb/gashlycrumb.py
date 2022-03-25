@@ -44,12 +44,17 @@ def main():
 
     char_arg = args.char
     file_arg = args.file
-    #print(file_arg)
 
-    d = {}
+    d = {}                              # create an empty dictionary to output the statement
     for line in file_arg:
+        """
+        - we do not need to use 'open' because of the way the file argument is added in argparse
+        - it can be thought that the file handle is created and opened in argparse option
+        - so we can directly read the file; else we would need a 'with' or 'open' statement
+        - this would create a file handle and then we use 'read'
+        """
         d[line[0].upper()] = line[:-1]
-    
+        
     for char in char_arg:
         if char not in 'abcdefghijklmnopqrstuvwxy':
             print(f'I do not know "{char}".')
