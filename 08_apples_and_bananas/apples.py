@@ -1,10 +1,10 @@
 #!/c/Users/csheth/AppData/Local/Microsoft/WindowsApps/python3
 
-# usr/bin/env/python3
+#!usr/bin/env/python3
 
 
 """
-Author  :
+Author  : CS
 Date    :
 Purpose :
 """
